@@ -1,0 +1,33 @@
+:root {
+  --mdx-color-primary: #1f6fae;
+  --mdx-color-on-primary: #ffffff;
+  --mdx-color-primary-container: #d7e9ff;
+  --mdx-color-on-primary-container: #001d36;
+  --mdx-color-surface: #ffffff;
+  --mdx-color-surface-variant: #f5f7fa;
+  --mdx-color-on-surface: #1a1c1e;
+  --mdx-color-outline: #c4c7cf;
+  --mdx-color-outline-strong: #8d9199;
+  --mdx-color-error: #b3261e;
+  --mdx-color-on-error: #ffffff;
+  --mdx-radius-xs: 8px;
+  --mdx-radius-sm: 12px;
+  --mdx-radius-md: 16px;
+  --mdx-radius-lg: 24px;
+  --mdx-space-1: 4px;
+  --mdx-space-2: 8px;
+  --mdx-space-3: 12px;
+  --mdx-space-4: 16px;
+  --mdx-space-5: 20px;
+  --mdx-space-6: 24px;
+  --mdx-space-8: 32px;
+  --mdx-elevation-1: 0 1px 2px rgba(15, 23, 42, 0.12), 0 1px 3px rgba(15, 23, 42, 0.08);
+  --mdx-elevation-2: 0 4px 8px rgba(15, 23, 42, 0.14), 0 2px 6px rgba(15, 23, 42, 0.1);
+  --mdx-font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --mdx-font-size-body: clamp(14px, 0.18vw + 13.3px, 16px);
+  --mdx-font-size-title: clamp(22px, 1vw + 16px, 30px);
+  --mdx-line-height-body: 1.5;
+  --mdx-motion-fast: 160ms;
+  --mdx-motion-normal: 220ms;
+  --mdx-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+}

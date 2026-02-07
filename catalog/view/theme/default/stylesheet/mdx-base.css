@@ -1,0 +1,64 @@
+.mdx-app {
+  font-family: var(--mdx-font-family);
+  font-size: var(--mdx-font-size-body);
+  line-height: var(--mdx-line-height-body);
+  color: var(--mdx-color-on-surface);
+  background: var(--mdx-color-surface);
+  text-rendering: optimizeLegibility;
+}
+
+.mdx-app *,
+.mdx-app *::before,
+.mdx-app *::after {
+  box-sizing: border-box;
+}
+
+.mdx-app img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mdx-app a {
+  text-underline-offset: 0.15em;
+}
+
+.mdx-app :focus-visible {
+  outline: 2px solid var(--mdx-color-primary);
+  outline-offset: 2px;
+}
+
+.mdx-app .container {
+  width: min(100% - clamp(16px, 2vw, 32px), 1240px);
+}
+
+.mdx-app .row {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.mdx-app [class*='col-'] {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.mdx-app .form-control,
+.mdx-app .input-group-addon,
+.mdx-app .btn,
+.mdx-app .breadcrumb,
+.mdx-app .panel,
+.mdx-app .alert,
+.mdx-app .pagination > li > a,
+.mdx-app .pagination > li > span {
+  border-radius: var(--mdx-radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mdx-app *,
+  .mdx-app *::before,
+  .mdx-app *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}

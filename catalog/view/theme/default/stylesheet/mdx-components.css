@@ -1,0 +1,125 @@
+.mdx-app .btn {
+  min-height: 44px;
+  padding: 10px 18px;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: background-color var(--mdx-motion-fast) var(--mdx-easing-standard), color var(--mdx-motion-fast) var(--mdx-easing-standard), border-color var(--mdx-motion-fast) var(--mdx-easing-standard), transform var(--mdx-motion-fast) var(--mdx-easing-standard);
+}
+
+.mdx-app .btn:active {
+  transform: translateY(1px);
+}
+
+.mdx-app .btn-primary {
+  background: var(--mdx-color-primary);
+  border-color: var(--mdx-color-primary);
+  color: var(--mdx-color-on-primary);
+}
+
+.mdx-app .btn-primary:hover,
+.mdx-app .btn-primary:focus {
+  background: #185e95;
+  border-color: #185e95;
+}
+
+.mdx-app .btn-default {
+  background: var(--mdx-color-surface-variant);
+  border-color: var(--mdx-color-outline);
+  color: var(--mdx-color-on-surface);
+}
+
+.mdx-app .btn-link {
+  border-radius: var(--mdx-radius-lg);
+}
+
+.mdx-app .form-control,
+.mdx-app select.form-control,
+.mdx-app textarea.form-control {
+  min-height: 44px;
+  padding: 10px 12px;
+  font-size: inherit;
+  border: 1px solid var(--mdx-color-outline);
+  background-color: #fff;
+  transition: border-color var(--mdx-motion-fast) var(--mdx-easing-standard), box-shadow var(--mdx-motion-fast) var(--mdx-easing-standard);
+}
+
+.mdx-app .form-control:focus {
+  border-color: var(--mdx-color-primary);
+  box-shadow: 0 0 0 3px rgba(31, 111, 174, 0.18);
+}
+
+.mdx-app .product-thumb,
+.mdx-app .panel,
+.mdx-app .well,
+.mdx-app .table-responsive,
+.mdx-app .list-group-item {
+  border-color: var(--mdx-color-outline);
+  border-radius: var(--mdx-radius-md);
+}
+
+.mdx-app .product-thumb {
+  box-shadow: var(--mdx-elevation-1);
+  transition: box-shadow var(--mdx-motion-normal) var(--mdx-easing-standard), transform var(--mdx-motion-normal) var(--mdx-easing-standard);
+}
+
+.mdx-app .product-thumb:hover {
+  box-shadow: var(--mdx-elevation-2);
+  transform: translateY(-1px);
+}
+
+.mdx-app .price,
+.mdx-app .product-thumb .price {
+  overflow-wrap: anywhere;
+}
+
+.mdx-app .badge,
+.mdx-app .label {
+  border-radius: var(--mdx-radius-lg);
+  padding: 4px 10px;
+}
+
+.mdx-app .breadcrumb {
+  background: var(--mdx-color-surface-variant);
+  padding: 10px 14px;
+  margin-bottom: var(--mdx-space-4);
+}
+
+.mdx-app .pagination > li > a,
+.mdx-app .pagination > li > span {
+  color: var(--mdx-color-on-surface);
+  border: 1px solid var(--mdx-color-outline);
+  margin: 0 2px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.mdx-app .pagination > .active > span,
+.mdx-app .pagination > .active > span:hover,
+.mdx-app .pagination > .active > span:focus,
+.mdx-app .pagination > .active > a,
+.mdx-app .pagination > .active > a:hover,
+.mdx-app .pagination > .active > a:focus {
+  background: var(--mdx-color-primary);
+  border-color: var(--mdx-color-primary);
+  color: var(--mdx-color-on-primary);
+}
+
+.mdx-app .alert {
+  border: 1px solid var(--mdx-color-outline);
+}
+
+.mdx-app .table > thead > tr > th {
+  border-bottom-width: 1px;
+  font-weight: 600;
+}
+
+.mdx-app .table > tbody > tr > td,
+.mdx-app .table > thead > tr > th {
+  vertical-align: middle;
+}
+
+.mdx-app #top,
+.mdx-app #menu,
+.mdx-app footer {
+  border-radius: 0;
+}
