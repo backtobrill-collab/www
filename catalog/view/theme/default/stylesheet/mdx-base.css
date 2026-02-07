@@ -1,0 +1,148 @@
+.mdx-app {
+  color: var(--md-sys-color-on-surface);
+  background: var(--md-sys-color-surface);
+  font-family: var(--md-ref-typeface-plain);
+  font-size: var(--md-sys-typescale-body-large-size);
+  line-height: var(--md-sys-typescale-body-large-line-height);
+  text-rendering: optimizeLegibility;
+  overflow-wrap: anywhere;
+}
+
+.mdx-app *,
+.mdx-app *::before,
+.mdx-app *::after {
+  box-sizing: border-box;
+}
+
+.mdx-app h1,
+.mdx-app h2,
+.mdx-app h3,
+.mdx-app h4,
+.mdx-app h5,
+.mdx-app h6 {
+  font-family: var(--md-ref-typeface-brand);
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.mdx-app h1 {
+  font-size: var(--md-sys-typescale-display-size);
+  margin: 0 0 var(--md-sys-space-5);
+}
+
+.mdx-app h2 {
+  font-size: var(--md-sys-typescale-headline-size);
+  margin: 0 0 var(--md-sys-space-5);
+}
+
+.mdx-app h3,
+.mdx-app h4 {
+  font-size: var(--md-sys-typescale-title-large-size);
+  margin: 0 0 var(--md-sys-space-4);
+}
+
+.mdx-app h5,
+.mdx-app h6 {
+  font-size: var(--md-sys-typescale-title-medium-size);
+  margin: 0 0 var(--md-sys-space-3);
+}
+
+.mdx-app p,
+.mdx-app ul,
+.mdx-app ol,
+.mdx-app .form-group,
+.mdx-app .caption,
+.mdx-app .buttons {
+  margin-bottom: var(--md-sys-space-4);
+}
+
+.mdx-app a {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+}
+
+.mdx-app a:hover {
+  color: var(--md-sys-color-primary-hover);
+}
+
+.mdx-app img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mdx-app .container {
+  width: min(100% - clamp(16px, 3vw, 40px), 1320px);
+}
+
+.mdx-app :focus {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+.mdx-app :focus:not(:focus-visible) {
+  outline: none;
+}
+
+.mdx-app :focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
+}
+
+.mdx-app input,
+.mdx-app select,
+.mdx-app textarea,
+.mdx-app button,
+.mdx-app .btn,
+.mdx-app a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mdx-app .dropdown-menu,
+.mdx-app .panel,
+.mdx-app .well,
+.mdx-app .modal-content,
+.mdx-app .alert,
+.mdx-app .breadcrumb,
+.mdx-app .pagination > li > a,
+.mdx-app .pagination > li > span,
+.mdx-app .table-responsive,
+.mdx-app .list-group-item,
+.mdx-app .form-control,
+.mdx-app .input-group-addon,
+.mdx-app .btn {
+  border-radius: var(--md-sys-shape-corner-small);
+}
+
+.mdx-app .table-responsive,
+.mdx-app .panel,
+.mdx-app .well,
+.mdx-app .modal-content,
+.mdx-app .dropdown-menu,
+.mdx-app .product-thumb,
+.mdx-app .list-group {
+  background: var(--md-sys-color-surface-container-lowest);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+.mdx-app .table-responsive,
+.mdx-app .well,
+.mdx-app .panel,
+.mdx-app .product-thumb,
+.mdx-app .checkout-cart #accordion,
+.mdx-app .checkout-checkout #content .panel {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mdx-app *,
+  .mdx-app *::before,
+  .mdx-app *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+}
