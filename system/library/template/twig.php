@@ -44,7 +44,7 @@ final class Twig {
 			}
 
 			throw new \RuntimeException('Twig environment class not found');
-		} catch (\Throwable $e) {
+		} catch (\Exception $e) {
 			trigger_error('Error: Could not load template ' . $filename . '! ' . $e->getMessage());
 			exit();
 		}	

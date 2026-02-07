@@ -542,18 +542,6 @@
   object-fit: cover;
 }
 
-.mdx-app .rating,
-.mdx-app [href='#tab-review'],
-.mdx-app #tab-review,
-.mdx-app #form-review,
-.mdx-app #review,
-.mdx-app #button-review,
-.mdx-app .product-review,
-.mdx-app .text_reviews,
-.mdx-app .review-count {
-  display: none !important;
-}
-
 .mdx-app #product-category .product-layout.product-grid {
   margin-bottom: var(--md-sys-space-4);
 }
@@ -608,4 +596,27 @@
 
 .mdx-app #product-category .product-thumb .button-group button:first-child {
   width: 100%;
+}
+
+
+.mdx-app #column-left .product-layout,
+.mdx-app #column-right .product-layout {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.mdx-app #column-left .product-thumb,
+.mdx-app #column-right .product-thumb {
+  padding: var(--md-sys-space-3);
+}
+
+.mdx-app #column-left .product-thumb .caption p,
+.mdx-app #column-right .product-thumb .caption p {
+  display: none;
+}
+
+.mdx-app #column-left .product-thumb .button-group,
+.mdx-app #column-right .product-thumb .button-group {
+  margin-top: var(--md-sys-space-2);
 }
