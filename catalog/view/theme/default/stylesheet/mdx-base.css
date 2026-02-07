@@ -1,9 +1,9 @@
 .mdx-app {
-  font-family: var(--mdx-font-family);
-  font-size: var(--mdx-font-size-body);
-  line-height: var(--mdx-line-height-body);
-  color: var(--mdx-color-on-surface);
-  background: var(--mdx-color-surface);
+  color: var(--md-sys-color-on-surface);
+  background: var(--md-sys-color-surface);
+  font-family: var(--md-ref-typeface-plain);
+  font-size: var(--md-sys-typescale-body-large-size);
+  line-height: var(--md-sys-typescale-body-large-line-height);
   text-rendering: optimizeLegibility;
 }
 
@@ -13,43 +13,85 @@
   box-sizing: border-box;
 }
 
-.mdx-app img {
-  max-width: 100%;
-  height: auto;
+.mdx-app h1,
+.mdx-app h2,
+.mdx-app h3,
+.mdx-app h4,
+.mdx-app h5,
+.mdx-app h6 {
+  font-family: var(--md-ref-typeface-brand);
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+
+.mdx-app h1,
+.mdx-app h2 {
+  font-size: var(--md-sys-typescale-title-large-size);
+  margin: 0 0 var(--md-sys-space-5);
+}
+
+.mdx-app h3,
+.mdx-app h4 {
+  font-size: var(--md-sys-typescale-title-medium-size);
+  margin: 0 0 var(--md-sys-space-4);
+}
+
+.mdx-app p,
+.mdx-app ul,
+.mdx-app ol,
+.mdx-app .form-group {
+  margin-bottom: var(--md-sys-space-4);
 }
 
 .mdx-app a {
-  text-underline-offset: 0.15em;
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
 }
 
-.mdx-app :focus-visible {
-  outline: 2px solid var(--mdx-color-primary);
-  outline-offset: 2px;
+.mdx-app a:hover {
+  color: #005a63;
+}
+
+.mdx-app img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .mdx-app .container {
-  width: min(100% - clamp(16px, 2vw, 32px), 1240px);
+  width: min(100% - clamp(16px, 3vw, 40px), 1320px);
 }
 
-.mdx-app .row {
-  margin-left: -10px;
-  margin-right: -10px;
+.mdx-app :focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
 }
 
-.mdx-app [class*='col-'] {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
+.mdx-app .dropdown-menu,
+.mdx-app .panel,
+.mdx-app .well,
+.mdx-app .modal-content,
+.mdx-app .alert,
+.mdx-app .breadcrumb,
+.mdx-app .pagination > li > a,
+.mdx-app .pagination > li > span,
+.mdx-app .table-responsive,
+.mdx-app .list-group-item,
 .mdx-app .form-control,
 .mdx-app .input-group-addon,
-.mdx-app .btn,
-.mdx-app .breadcrumb,
+.mdx-app .btn {
+  border-radius: var(--md-sys-shape-corner-small);
+}
+
+.mdx-app .table-responsive,
 .mdx-app .panel,
-.mdx-app .alert,
-.mdx-app .pagination > li > a,
-.mdx-app .pagination > li > span {
-  border-radius: var(--mdx-radius-sm);
+.mdx-app .well,
+.mdx-app .modal-content,
+.mdx-app .dropdown-menu {
+  background: var(--md-sys-color-surface-container-lowest);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  box-shadow: var(--md-sys-elevation-1);
 }
 
 @media (prefers-reduced-motion: reduce) {

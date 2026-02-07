@@ -1,9 +1,54 @@
+.mdx-app body,
+.mdx-app #top,
+.mdx-app header,
+.mdx-app #menu,
+.mdx-app footer {
+  background: var(--md-sys-color-surface);
+}
+
+.mdx-app #top {
+  background: var(--md-sys-color-surface-container-low);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  margin-bottom: var(--md-sys-space-6);
+  min-height: 44px;
+}
+
+.mdx-app #top .btn-link,
+.mdx-app #top-links li,
+.mdx-app #top-links a {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.mdx-app #menu {
+  background: var(--md-sys-color-surface-container);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-large);
+  box-shadow: var(--md-sys-elevation-1);
+}
+
+.mdx-app #menu .nav > li > a {
+  color: var(--md-sys-color-on-surface);
+  border-radius: var(--md-sys-shape-corner-full);
+  margin: var(--md-sys-space-1);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.mdx-app #menu .nav > li > a:hover,
+.mdx-app #menu .nav > li.open > a {
+  background: color-mix(in srgb, var(--md-sys-color-primary) 14%, transparent);
+  color: var(--md-sys-color-primary);
+}
+
 .mdx-app .btn {
   min-height: 44px;
   padding: 10px 18px;
   border: 1px solid transparent;
-  box-shadow: none;
-  transition: background-color var(--mdx-motion-fast) var(--mdx-easing-standard), color var(--mdx-motion-fast) var(--mdx-easing-standard), border-color var(--mdx-motion-fast) var(--mdx-easing-standard), transform var(--mdx-motion-fast) var(--mdx-easing-standard);
+  font-size: var(--md-sys-typescale-label-large-size);
+  font-weight: var(--md-sys-typescale-label-large-weight);
+  letter-spacing: 0.01em;
+  transition: transform var(--md-sys-motion-fast) var(--md-sys-easing-emphasized), opacity var(--md-sys-motion-fast) var(--md-sys-easing-emphasized), background-color var(--md-sys-motion-fast) var(--md-sys-easing-emphasized), border-color var(--md-sys-motion-fast) var(--md-sys-easing-emphasized), color var(--md-sys-motion-fast) var(--md-sys-easing-emphasized);
 }
 
 .mdx-app .btn:active {
@@ -11,115 +56,247 @@
 }
 
 .mdx-app .btn-primary {
-  background: var(--mdx-color-primary);
-  border-color: var(--mdx-color-primary);
-  color: var(--mdx-color-on-primary);
+  color: var(--md-sys-color-on-primary);
+  background: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
 }
 
 .mdx-app .btn-primary:hover,
 .mdx-app .btn-primary:focus {
-  background: #185e95;
-  border-color: #185e95;
+  background: #005c65;
+  border-color: #005c65;
 }
 
-.mdx-app .btn-default {
-  background: var(--mdx-color-surface-variant);
-  border-color: var(--mdx-color-outline);
-  color: var(--mdx-color-on-surface);
+.mdx-app .btn-default,
+.mdx-app .btn-secondary {
+  color: var(--md-sys-color-on-secondary-container);
+  background: var(--md-sys-color-secondary-container);
+  border-color: transparent;
 }
 
-.mdx-app .btn-link {
-  border-radius: var(--mdx-radius-lg);
+.mdx-app .btn-default:hover,
+.mdx-app .btn-secondary:hover {
+  background: #b2dde0;
+}
+
+.mdx-app .btn-link,
+.mdx-app .product-thumb .button-group button + button {
+  color: var(--md-sys-color-primary);
+  background: transparent;
+  border-color: var(--md-sys-color-outline-variant);
+}
+
+.mdx-app .btn[disabled],
+.mdx-app .btn.disabled {
+  background: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+  color: color-mix(in srgb, var(--md-sys-color-on-surface) 38%, transparent);
+  border-color: transparent;
+  opacity: 1;
 }
 
 .mdx-app .form-control,
 .mdx-app select.form-control,
-.mdx-app textarea.form-control {
+.mdx-app textarea.form-control,
+.mdx-app .input-group-addon {
   min-height: 44px;
+  border: 1px solid var(--md-sys-color-outline);
+  background: var(--md-sys-color-surface-container-lowest);
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-body-medium-size);
   padding: 10px 12px;
-  font-size: inherit;
-  border: 1px solid var(--mdx-color-outline);
-  background-color: #fff;
-  transition: border-color var(--mdx-motion-fast) var(--mdx-easing-standard), box-shadow var(--mdx-motion-fast) var(--mdx-easing-standard);
 }
 
-.mdx-app .form-control:focus {
-  border-color: var(--mdx-color-primary);
-  box-shadow: 0 0 0 3px rgba(31, 111, 174, 0.18);
+.mdx-app .form-control:focus,
+.mdx-app select.form-control:focus,
+.mdx-app textarea.form-control:focus {
+  border-color: var(--md-sys-color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--md-sys-color-primary) 20%, transparent);
 }
 
-.mdx-app .product-thumb,
-.mdx-app .panel,
-.mdx-app .well,
-.mdx-app .table-responsive,
-.mdx-app .list-group-item {
-  border-color: var(--mdx-color-outline);
-  border-radius: var(--mdx-radius-md);
+.mdx-app .text-danger,
+.mdx-app .alert-danger {
+  color: var(--md-sys-color-on-error-container);
 }
 
-.mdx-app .product-thumb {
-  box-shadow: var(--mdx-elevation-1);
-  transition: box-shadow var(--mdx-motion-normal) var(--mdx-easing-standard), transform var(--mdx-motion-normal) var(--mdx-easing-standard);
+.mdx-app .alert {
+  border: 1px solid var(--md-sys-color-outline-variant);
+  background: var(--md-sys-color-surface-container-low);
 }
 
-.mdx-app .product-thumb:hover {
-  box-shadow: var(--mdx-elevation-2);
-  transform: translateY(-1px);
+.mdx-app .alert-success {
+  background: color-mix(in srgb, var(--md-sys-color-success) 14%, var(--md-sys-color-surface-container-lowest));
+  border-color: color-mix(in srgb, var(--md-sys-color-success) 28%, var(--md-sys-color-outline-variant));
 }
 
-.mdx-app .price,
-.mdx-app .product-thumb .price {
-  overflow-wrap: anywhere;
+.mdx-app .alert-warning {
+  background: color-mix(in srgb, var(--md-sys-color-warning) 16%, var(--md-sys-color-surface-container-lowest));
+  border-color: color-mix(in srgb, var(--md-sys-color-warning) 30%, var(--md-sys-color-outline-variant));
 }
 
-.mdx-app .badge,
-.mdx-app .label {
-  border-radius: var(--mdx-radius-lg);
-  padding: 4px 10px;
+.mdx-app .alert-danger {
+  background: color-mix(in srgb, var(--md-sys-color-error) 15%, var(--md-sys-color-surface-container-lowest));
+  border-color: color-mix(in srgb, var(--md-sys-color-error) 30%, var(--md-sys-color-outline-variant));
 }
 
 .mdx-app .breadcrumb {
-  background: var(--mdx-color-surface-variant);
-  padding: 10px 14px;
-  margin-bottom: var(--mdx-space-4);
+  background: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  padding: 12px 16px;
+}
+
+.mdx-app .breadcrumb > li + li::before {
+  color: var(--md-sys-color-outline);
 }
 
 .mdx-app .pagination > li > a,
 .mdx-app .pagination > li > span {
-  color: var(--mdx-color-on-surface);
-  border: 1px solid var(--mdx-color-outline);
-  margin: 0 2px;
-  min-width: 40px;
-  text-align: center;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-on-surface);
+  background: var(--md-sys-color-surface-container-lowest);
 }
 
-.mdx-app .pagination > .active > span,
-.mdx-app .pagination > .active > span:hover,
-.mdx-app .pagination > .active > span:focus,
 .mdx-app .pagination > .active > a,
+.mdx-app .pagination > .active > span,
 .mdx-app .pagination > .active > a:hover,
-.mdx-app .pagination > .active > a:focus {
-  background: var(--mdx-color-primary);
-  border-color: var(--mdx-color-primary);
-  color: var(--mdx-color-on-primary);
+.mdx-app .pagination > .active > span:hover {
+  background: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
 }
 
-.mdx-app .alert {
-  border: 1px solid var(--mdx-color-outline);
+.mdx-app .product-thumb {
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-medium);
+  background: var(--md-sys-color-surface-container-lowest);
+  box-shadow: var(--md-sys-elevation-1);
+  transition: transform var(--md-sys-motion-medium) var(--md-sys-easing-emphasized), opacity var(--md-sys-motion-medium) var(--md-sys-easing-emphasized);
+  padding: var(--md-sys-space-4);
 }
 
-.mdx-app .table > thead > tr > th {
-  border-bottom-width: 1px;
+.mdx-app .product-thumb:hover {
+  transform: translateY(-2px);
+}
+
+.mdx-app .product-thumb .caption {
+  min-height: 0;
+}
+
+.mdx-app .product-thumb .caption h4 a,
+.mdx-app .product-thumb .caption h4 {
+  color: var(--md-sys-color-on-surface);
+  overflow-wrap: anywhere;
+}
+
+.mdx-app .product-thumb .price,
+.mdx-app .product-page__price,
+.mdx-app h2.price {
+  color: var(--md-sys-color-primary);
+  font-size: clamp(1.15rem, 0.4vw + 1rem, 1.45rem);
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.mdx-app .product-thumb .price-old {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.mdx-app .product-thumb .button-group {
+  max-width: none;
+  gap: var(--md-sys-space-2);
+}
+
+.mdx-app .product-thumb .button-group button {
+  min-height: 44px;
+  border-radius: var(--md-sys-shape-corner-full);
+  border: 1px solid transparent;
+}
+
+.mdx-app .product-thumb .button-group button:first-child {
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.mdx-app .product-thumb .button-group button:first-child:hover {
+  background: #005c65;
+}
+
+.mdx-app .badge,
+.mdx-app .label {
+  border-radius: var(--md-sys-shape-corner-full);
+  padding: 4px 10px;
   font-weight: 600;
 }
 
-.mdx-app .table > tbody > tr > td,
 .mdx-app .table > thead > tr > th {
-  vertical-align: middle;
+  color: var(--md-sys-color-on-surface);
+  background: var(--md-sys-color-surface-container-low);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
 }
 
-.mdx-app #top,
-.mdx-app #menu,
+.mdx-app .table > tbody > tr > td,
+.mdx-app .table > tbody > tr > th {
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.mdx-app #search .input-lg,
+.mdx-app #cart > .btn {
+  height: 44px;
+  border-radius: var(--md-sys-shape-corner-full);
+}
+
+.mdx-app #cart > .btn {
+  background: var(--md-sys-color-surface-container-low);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-on-surface);
+}
+
+.mdx-app #cart > .btn i {
+  color: var(--md-sys-color-primary);
+}
+
+.mdx-app #cart .dropdown-menu {
+  background: var(--md-sys-color-surface-container-lowest);
+}
+
+.mdx-app .list-group a {
+  border: 1px solid var(--md-sys-color-outline-variant);
+  background: var(--md-sys-color-surface-container-lowest);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.mdx-app .list-group a:hover,
+.mdx-app .list-group a.active,
+.mdx-app .list-group a.active:hover {
+  background: color-mix(in srgb, var(--md-sys-color-primary) 12%, var(--md-sys-color-surface-container-lowest));
+  border-color: color-mix(in srgb, var(--md-sys-color-primary) 24%, var(--md-sys-color-outline-variant));
+  color: var(--md-sys-color-primary);
+}
+
 .mdx-app footer {
-  border-radius: 0;
+  margin-top: var(--md-sys-space-8);
+  padding-top: var(--md-sys-space-8);
+  padding-bottom: var(--md-sys-space-6);
+  border-top: 1px solid var(--md-sys-color-outline-variant);
+  background: var(--md-sys-color-surface-container-low);
+}
+
+@media (max-width: 767px) {
+  .mdx-app #menu {
+    border-radius: var(--md-sys-shape-corner-medium);
+  }
+
+  .mdx-app #top {
+    margin-bottom: var(--md-sys-space-4);
+  }
+
+  .mdx-app .product-thumb {
+    padding: var(--md-sys-space-3);
+  }
 }

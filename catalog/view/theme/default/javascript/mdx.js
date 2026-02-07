@@ -1,26 +1,34 @@
 (function () {
   'use strict';
 
-  document.addEventListener('click', function (event) {
-    var trigger = event.target.closest('[data-mdx-dropdown]');
+  function closeMenus() {
+    var openMenus = document.querySelectorAll('.md-menu[aria-hidden="false"]');
+    for (var i = 0; i < openMenus.length; i += 1) {
+      openMenus[i].setAttribute('aria-hidden', 'true');
+    }
+  }
 
-    if (trigger) {
-      var menu = trigger.nextElementSibling;
-      if (menu && menu.classList.contains('mdx-dropdown-menu')) {
-        var expanded = trigger.getAttribute('aria-expanded') === 'true';
-        trigger.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-        menu.hidden = expanded;
+  document.addEventListener('click', function (event) {
+    var menuTrigger = event.target.closest('[data-md-menu-trigger]');
+    if (menuTrigger) {
+      var menuId = menuTrigger.getAttribute('data-md-menu-trigger');
+      var menu = document.getElementById(menuId);
+      if (menu) {
+        var opened = menu.getAttribute('aria-hidden') === 'false';
+        closeMenus();
+        menu.setAttribute('aria-hidden', opened ? 'true' : 'false');
       }
       return;
     }
 
-    var openMenus = document.querySelectorAll('.mdx-dropdown-menu:not([hidden])');
-    for (var i = 0; i < openMenus.length; i += 1) {
-      openMenus[i].hidden = true;
-      var toggle = openMenus[i].previousElementSibling;
-      if (toggle && toggle.hasAttribute('aria-expanded')) {
-        toggle.setAttribute('aria-expanded', 'false');
-      }
+    if (!event.target.closest('.md-menu')) {
+      closeMenus();
+    }
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeMenus();
     }
   });
 })();
