@@ -553,3 +553,59 @@
 .mdx-app .review-count {
   display: none !important;
 }
+
+.mdx-app #product-category .product-layout.product-grid {
+  margin-bottom: var(--md-sys-space-4);
+}
+
+.mdx-app #product-category .product-thumb {
+  border-radius: 28px;
+  background: var(--md-sys-color-surface-container-low);
+  padding: var(--md-sys-space-3);
+}
+
+.mdx-app #product-category .product-thumb .image {
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--md-sys-color-inverse-surface);
+}
+
+.mdx-app #product-category .product-thumb .caption {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-space-2);
+}
+
+.mdx-app #product-category .product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--md-sys-space-2);
+  font-size: var(--md-sys-typescale-label-medium-size);
+  font-weight: var(--md-sys-typescale-label-medium-weight);
+}
+
+.mdx-app #product-category .product-stock {
+  color: var(--md-sys-color-success);
+}
+
+.mdx-app #product-category .product-code {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.mdx-app #product-category .product-thumb .caption h4 {
+  margin: 0;
+}
+
+.mdx-app #product-category .product-thumb .caption p {
+  margin: 0;
+}
+
+.mdx-app #product-category .product-thumb .price {
+  margin-top: var(--md-sys-space-2);
+  margin-bottom: var(--md-sys-space-2);
+}
+
+.mdx-app #product-category .product-thumb .button-group button:first-child {
+  width: 100%;
+}
