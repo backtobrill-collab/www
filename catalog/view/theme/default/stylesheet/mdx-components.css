@@ -86,6 +86,11 @@
   font-size: var(--md-sys-typescale-label-large-size);
   font-weight: var(--md-sys-typescale-label-large-weight);
   letter-spacing: 0.01em;
+  line-height: 1.2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   transition: transform var(--md-sys-motion-fast) var(--md-sys-easing-emphasized), opacity var(--md-sys-motion-fast) var(--md-sys-easing-emphasized), background-color var(--md-sys-motion-fast) var(--md-sys-easing-emphasized), border-color var(--md-sys-motion-fast) var(--md-sys-easing-emphasized), color var(--md-sys-motion-fast) var(--md-sys-easing-emphasized), box-shadow var(--md-sys-motion-fast) var(--md-sys-easing-emphasized);
 }
 
@@ -156,6 +161,25 @@
   color: var(--md-sys-color-state-disabled-fg);
   border-color: transparent;
   opacity: 1;
+}
+
+.mdx-app .btn i,
+.mdx-app .product-thumb .button-group button i,
+.mdx-app #cart > .btn i {
+  line-height: 1;
+}
+
+.mdx-app .input-group-addon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.mdx-app .dropdown-menu {
+  z-index: 1050;
+}
+
+.mdx-app .product-thumb .caption p {
+  line-height: var(--md-sys-typescale-body-large-line-height);
 }
 
 .mdx-app .form-control,
