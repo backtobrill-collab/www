@@ -10,6 +10,8 @@
   --md-admin-focus: rgba(0, 109, 119, 0.22);
   --md-admin-radius-sm: 12px;
   --md-admin-radius-md: 16px;
+  --md-admin-radius-full: 999px;
+  --md-admin-primary-hover: #005f68;
   --md-admin-space-1: 4px;
   --md-admin-space-2: 8px;
   --md-admin-space-3: 12px;
@@ -41,7 +43,7 @@ body {
 
 .btn {
   min-height: 40px;
-  border-radius: 999px;
+  border-radius: var(--md-admin-radius-full);
 }
 
 .btn-primary {
@@ -52,8 +54,8 @@ body {
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background: #005f68;
-  border-color: #005f68;
+  background: var(--md-admin-primary-hover);
+  border-color: var(--md-admin-primary-hover);
 }
 
 .form-control,
@@ -85,7 +87,7 @@ textarea.form-control:focus,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
+  border-radius: var(--md-admin-radius-full);
 }
 
 .pagination > .active > a,
