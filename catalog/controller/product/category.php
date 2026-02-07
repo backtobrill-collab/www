@@ -239,6 +239,7 @@ class ControllerProductCategory extends Controller {
 					'tax'         => $tax,
 					'minimum'     => $result['minimum'] > 0 ? $result['minimum'] : 1,
 					'rating'      => $result['rating'],
+					'stock_label' => $result['quantity'] > 0 ? 'В наличии ' . (int)$result['quantity'] . ' шт.' : $result['stock_status'],
 					'href'        => $this->url->link('product/product', 'path=' . $this->request->get['path'] . '&product_id=' . $result['product_id'] . $url)
 				);
 			}
