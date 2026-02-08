@@ -24,21 +24,28 @@ final class Twig {
 			'autoescape'  => false,
 			'debug'       => false,
 			'auto_reload' => true,
-			'cache'       => DIR_CACHE . 'template/'
+			'cache'       => DIR_CACHE . 'template/',
+			'optimizations' => 0
 		);
 
 		try {
-			//$loader = new \Twig\Loader\ArrayLoader(array($filename . '.twig' => $code));
-			
-			$loader1 = new \Twig\Loader\ArrayLoader(array($filename . '.twig' => $code));
-            $loader2 = new \Twig\Loader\FilesystemLoader(array(DIR_TEMPLATE)); // to find further includes
-            $loader = new \Twig\Loader\ChainLoader(array($loader1, $loader2));
+			if (class_exists('\\Twig\\Environment')) {
+				$loader1 = new \Twig\Loader\ArrayLoader(array($filename . '.twig' => $code));
+				$loader2 = new \Twig\Loader\FilesystemLoader(array(DIR_TEMPLATE));
+				$loader = new \Twig\Loader\ChainLoader(array($loader1, $loader2));
+				$twig = new \Twig\Environment($loader, $config);
+				return $twig->render($filename . '.twig', $this->data);
+			}
 
-			$twig = new \Twig\Environment($loader, $config);
+			if (class_exists('\\Twig_Environment')) {
+				$loader = new \Twig_Loader_String();
+				$twig = new \Twig_Environment($loader, $config);
+				return $twig->render($code, $this->data);
+			}
 
-			return $twig->render($filename . '.twig', $this->data);
-		} catch (Exception $e) {
-			trigger_error('Error: Could not load template ' . $filename . '!');
+			throw new \RuntimeException('Twig environment class not found');
+		} catch (\Exception $e) {
+			trigger_error('Error: Could not load template ' . $filename . '! ' . $e->getMessage());
 			exit();
 		}	
 	}	
