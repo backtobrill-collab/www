@@ -1,5 +1,35 @@
 {{ header }}
-<div id="common-home" class="container">
+<section class="ozon-hero-wrap">
+  <div class="container">
+    <div class="ozon-hero">
+      <div class="ozon-hero__content">
+        <p class="ozon-hero__badge">Маркетплейс нового поколения</p>
+        <h1>Магазин в стиле Ozon: электроника, дом, одежда и экспресс‑доставка</h1>
+        <p>Подборки, акции и товары дня в одном каталоге. Быстрый поиск, удобная корзина и прозрачные условия заказа.</p>
+        <div class="ozon-hero__actions">
+          <a href="index.php?route=product/category&path=20" class="btn btn-primary">Перейти в каталог</a>
+          <a href="index.php?route=account/login" class="btn btn-default">Войти в кабинет</a>
+        </div>
+      </div>
+      <div class="ozon-hero__stats">
+        <div><strong>1M+</strong><span>товаров</span></div>
+        <div><strong>24/7</strong><span>поддержка</span></div>
+        <div><strong>2 часа</strong><span>доставка по городу</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="common-home" class="container ozon-home">
+  <section class="ozon-collections">
+    <h2>Популярные разделы</h2>
+    <div class="ozon-collections__grid">
+      <a href="index.php?route=product/category&path=20" class="ozon-collections__item">Смартфоны и гаджеты</a>
+      <a href="index.php?route=product/category&path=18" class="ozon-collections__item">Ноутбуки и техника</a>
+      <a href="index.php?route=product/category&path=25" class="ozon-collections__item">Товары для дома</a>
+      <a href="index.php?route=product/special" class="ozon-collections__item">Суперцены дня</a>
+    </div>
+  </section>
   <div class="row">{{ column_left }}
     {% if column_left and column_right %}
     {% set class = 'col-sm-6' %}

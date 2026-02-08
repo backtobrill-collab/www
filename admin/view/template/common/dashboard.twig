@@ -1,5 +1,5 @@
 {{ header }}{{ column_left }}
-<div id="content">
+<div id="content" class="ozon-admin-dashboard">
   <div class="page-header">
     <div class="container-fluid">
       <div class="pull-right">
@@ -13,11 +13,66 @@
       </ul>
     </div>
   </div>
-  <div class="container-fluid">{% if error_install %}
+
+  <div class="container-fluid">
+    {% if error_install %}
     <div class="alert alert-danger alert-dismissible">
       <button type="button" class="close pull-right" data-dismiss="alert">&times;</button>
-      <i class="fa fa-exclamation-circle"></i> {{ error_install }}</div>
+      <i class="fa fa-exclamation-circle"></i> {{ error_install }}
+    </div>
     {% endif %}
+
+    <section class="ozon-admin-kpis">
+      <article>
+        <span class="kpi-label">Заказы сегодня</span>
+        <strong>1 248</strong>
+        <small>+17% к вчерашнему дню</small>
+      </article>
+      <article>
+        <span class="kpi-label">Оборот</span>
+        <strong>₽ 8 420 000</strong>
+        <small>Средний чек ₽ 3 910</small>
+      </article>
+      <article>
+        <span class="kpi-label">Новые продавцы</span>
+        <strong>64</strong>
+        <small>Проверка модерацией 12 заявок</small>
+      </article>
+      <article>
+        <span class="kpi-label">SLA доставки</span>
+        <strong>96.4%</strong>
+        <small>Заказы в срок</small>
+      </article>
+    </section>
+
+    <section class="ozon-admin-panels row">
+      <div class="col-md-8">
+        <div class="panel panel-default ozon-panel">
+          <div class="panel-heading"><i class="fa fa-line-chart"></i> Операционная сводка</div>
+          <div class="panel-body">
+            <ul>
+              <li>Пиковая нагрузка: <strong>14:00–16:00</strong>.</li>
+              <li>Топ‑категория по выручке: <strong>Электроника</strong>.</li>
+              <li>Возвраты за 24 часа: <strong>1.2%</strong> (в пределах нормы).</li>
+              <li>Запасы по SKU с риском out-of-stock: <strong>37</strong>.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="panel panel-default ozon-panel">
+          <div class="panel-heading"><i class="fa fa-bell-o"></i> Требует внимания</div>
+          <div class="panel-body">
+            <ul>
+              <li>7 товаров ожидают фото‑модерацию.</li>
+              <li>3 поставки задержаны более чем на 6 часов.</li>
+              <li>2 витрины кампаний завершаются сегодня.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     {% for row in rows %}
     <div class="row">{% for dashboard_1 in row %}
       {% set class = 'col-lg-%s %s'|format(dashboard_1.width, 'col-md-3 col-sm-6') %}
@@ -28,8 +83,11 @@
       {% endfor %}
       <div class="{{ class }}">{{ dashboard_1.output }}</div>
       {% endfor %}</div>
-    {% endfor %}</div>
+    {% endfor %}
+
     {{ security }}
+  </div>
+
   <script type="text/javascript"><!--
 $('#button-developer').on('click', function() {
 	$.ajax({
@@ -53,6 +111,6 @@ $('#button-developer').on('click', function() {
 		}
 	});	
 });	
-//--></script> 
+//--></script>
 </div>
 {{ footer }}
