@@ -358,3 +358,27 @@ html[dir=rtl] .input-group-btn:last-child > .btn {border-top-right-radius:0;bord
 html[dir=rtl] .input-group .form-control:first-child {border-top-right-radius:5px;border-bottom-right-radius:5px;border-top-left-radius:unset;border-bottom-left-radius:unset}
 html[dir=rtl] .container .row:first-child  .col-sm-4, html[dir=rtl] .container .row:first-child  .col-sm-5 {float:right}
 html[dir=rtl] #cart .dropdown-menu {left:0;right:auto}
+/* Ozon-inspired homepage layout */
+.ozon-hero-wrap {background:linear-gradient(135deg,#005bff,#3a8bff);padding:24px 0 30px;margin-bottom:20px;color:#fff}
+.ozon-hero {display:flex;justify-content:space-between;gap:24px;align-items:stretch;background:rgba(255,255,255,.1);border-radius:18px;padding:26px;backdrop-filter:blur(3px)}
+.ozon-hero__content h1 {margin:8px 0 10px;font-size:34px;line-height:1.2;color:#fff}
+.ozon-hero__content p {max-width:700px;color:#eef4ff}
+.ozon-hero__badge {display:inline-block;background:#ffd447;color:#163171;padding:6px 12px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.02em;text-transform:uppercase}
+.ozon-hero__actions {display:flex;gap:12px;margin-top:18px}
+.ozon-hero__stats {display:grid;grid-template-columns:1fr;gap:12px;min-width:220px}
+.ozon-hero__stats div {background:rgba(255,255,255,.16);border-radius:12px;padding:14px}
+.ozon-hero__stats strong {display:block;font-size:24px;line-height:1.1}
+.ozon-home .ozon-collections {margin:0 0 22px}
+.ozon-home .ozon-collections h2 {font-size:24px;margin:0 0 14px}
+.ozon-collections__grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ozon-collections__item {display:flex;align-items:flex-end;min-height:110px;padding:14px;border-radius:14px;background:#f4f7ff;border:1px solid #dfe8ff;font-weight:700;color:#1743ac}
+.ozon-collections__item:hover {background:#eaf0ff;text-decoration:none;color:#0f2d77}
+@media (max-width:992px){
+  .ozon-hero {flex-direction:column}
+  .ozon-collections__grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:576px){
+  .ozon-hero__content h1 {font-size:26px}
+  .ozon-hero__actions {flex-direction:column}
+  .ozon-collections__grid {grid-template-columns:1fr}
+}

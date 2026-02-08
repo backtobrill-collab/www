@@ -291,3 +291,19 @@ select, input[type="text"], input[type="password"], input[type="datetime"], inpu
     #filter-product + .col-md-9.col-sm-12{left:0;width:100%;}
     .open-close-filter{position:absolute;top:200px;left:-37px;display:inline;border-radius:4px 0 0 4px;cursor:pointer;outline:none !important}
 }
+/* Marketplace-like admin dashboard block */
+.ozon-admin-dashboard .ozon-admin-kpis {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:0 0 18px}
+.ozon-admin-dashboard .ozon-admin-kpis article {background:linear-gradient(140deg,#0a56f0,#1f7bff);color:#fff;border-radius:14px;padding:16px}
+.ozon-admin-dashboard .ozon-admin-kpis .kpi-label {display:block;font-size:12px;text-transform:uppercase;opacity:.9;letter-spacing:.04em}
+.ozon-admin-dashboard .ozon-admin-kpis strong {display:block;font-size:27px;line-height:1.2;margin:8px 0}
+.ozon-admin-dashboard .ozon-admin-kpis small {color:#e4edff}
+.ozon-admin-dashboard .ozon-panel {border:none;border-radius:14px;box-shadow:0 6px 20px rgba(10,52,130,.1)}
+.ozon-admin-dashboard .ozon-panel .panel-heading {border-radius:14px 14px 0 0;font-weight:700;background:#f3f7ff;border:none;color:#143b96}
+.ozon-admin-dashboard .ozon-panel .panel-body ul {padding-left:18px;margin:0}
+.ozon-admin-dashboard .ozon-panel .panel-body li {margin:0 0 8px}
+@media (max-width:1200px){
+  .ozon-admin-dashboard .ozon-admin-kpis {grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:767px){
+  .ozon-admin-dashboard .ozon-admin-kpis {grid-template-columns:1fr}
+}
